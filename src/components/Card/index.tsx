@@ -1,4 +1,5 @@
-import { FaRegArrowAltCircleUp } from "react-icons/fa"
+import { FaRegArrowAltCircleDown, FaRegArrowAltCircleUp } from "react-icons/fa"
+import { MdAttachMoney } from "react-icons/md"
 
 type CardProps = {
   title: string
@@ -8,13 +9,17 @@ type CardProps = {
 
 export default function Card({ title, value, mode }: CardProps) {
   const entryIcon = <FaRegArrowAltCircleUp />
+  const exitIcon = <FaRegArrowAltCircleDown />
+  const totalIcon = <MdAttachMoney />
+
+
 
   const cardColor =
     mode === "entry"
       ? entryIcon
       : mode === "exit"
-      ? "bg-red-300"
-      : "bg-zinc-300"
+      ? exitIcon
+      : mode === 'total' ? totalIcon : ""
 
   return (
     <div className="w-[400px] h-[200px] bg-zinc-300 rounded px-8 py-2">
