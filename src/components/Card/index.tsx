@@ -3,7 +3,7 @@ import { MdAttachMoney } from "react-icons/md"
 
 type CardProps = {
   title: string
-  value: string
+  value: string | number
   mode: "entry" | "exit" | "total"
 }
 
@@ -12,14 +12,14 @@ export default function Card({ title, value, mode }: CardProps) {
   const exitIcon = <FaRegArrowAltCircleDown />
   const totalIcon = <MdAttachMoney />
 
-
-
   const cardColor =
     mode === "entry"
       ? entryIcon
       : mode === "exit"
       ? exitIcon
-      : mode === 'total' ? totalIcon : ""
+      : mode === "total"
+      ? totalIcon
+      : ""
 
   return (
     <div className="w-[400px] h-[200px] bg-zinc-300 rounded px-8 py-2">
