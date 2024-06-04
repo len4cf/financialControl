@@ -6,6 +6,7 @@ import TextInput from "./components/Input/TextInput"
 import Title from "./components/Title/Title"
 import Radio from "./components/Input/Radio"
 import ExpensesList from "./components/ExpensesList"
+import Swal from "sweetalert2"
 
 export type TransacaoType = {
   descricao: string
@@ -37,17 +38,34 @@ function App() {
     setValor(e.target.value)
   }
 
+  function clearFields() {
+    setDescricao("")
+    setValor("")
+    setSelectedRadio("")
+  }
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const valorNumerico = parseInt(valor, 10)
 
     if (isNaN(valorNumerico)) {
-      alert("Digite um valor válido")
+      Swal.fire({
+        title: "Erro",
+        text: "Digite um valor válido",
+        icon: "error",
+        confirmButtonText: "Ok",
+      })
       return
     }
 
-    if (!valor || !descricao) {
-      alert("Preencha todos os campos")
+    if (!valor || !descricao || !selectedRadio) {
+      Swal.fire({
+        title: "Erro",
+        text: "Preencha todos os campos",
+        icon: "error",
+        confirmButtonText: "Ok",
+      })
+      return
     }
 
     if (selectedRadio === "entrada") {
@@ -65,8 +83,7 @@ function App() {
       },
     ])
 
-    setValor("")
-    setDescricao("")
+    clearFields()
   }
 
   const mascaraValor = (valor: number) => {
