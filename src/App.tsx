@@ -95,13 +95,9 @@ function App() {
 
   return (
     <div>
-      <Title
-        label="Controle Financeiro"
-        size="xl"
-        cClassName="mb-4 text-center"
-      />
+      <Title label="xxx" size="xl" cClassName="mb-4 text-center" />
       <Divider />
-      <div className="flex justify-between mt-4">
+      <div className="flex md:flex flex-col md:gap-0 gap-4 justify-between mt-4">
         <Card
           title="Entrada"
           value={mascaraValor(valorEntradaEnviado)}
@@ -120,14 +116,15 @@ function App() {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="mt-[3%] flex items-center justify-between bg-zinc-300 p-10 rounded text-zinc-700"
+        className="mt-[3%] flex items-center justify-between bg-zinc-300 p-10 rounded text-zinc-700  md:flex-row flex-col"
       >
-        <div className="flex gap-5">
+        <div className="flex gap-5 md:flex-row flex-col">
           <TextInput
             label="Descrição"
             value={descricao}
             onChange={handleDescricaoChange}
             placeholder="Ex: Compra de pão"
+            maxLength={14}
             required
           />
           <TextInput
@@ -138,7 +135,7 @@ function App() {
             required
           />
         </div>
-        <div className="flex gap-14">
+        <div className="flex md:gap-14 md:mt-0 md:mb-0 mt-2 mb-3 gap-4 md:flex-row flex-col">
           <Radio
             onChange={handleRadioChange}
             isChecked={selectedRadio === "entrada"}

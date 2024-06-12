@@ -22,13 +22,13 @@ export default function Card({ title, value, mode }: CardProps) {
       : ""
 
   return (
-    <div className="w-[400px] h-[200px] bg-zinc-300 rounded px-8 py-2">
-      <p className="text-zinc-700 text-center flex justify-between text-2xl items-center">
+    <div className="md:w-[400px] w-full md:h-[200px] h-[100px] bg-zinc-300 rounded px-8 py-2">
+      <p className="text-zinc-700 text-center flex justify-between md:text-2xl text-xl items-center">
         {title}
         {cardColor}
       </p>
-      <div className="bg-slate-100 h-[65%] mt-4 p-2 rounded flex items-center justify-center">
-        <p className="font-semibold text-4xl">{value}</p>
+      <div className="bg-slate-100 md:h-[65%] h-[40%] mt-4 p-2 rounded flex items-center justify-center">
+        <p className="font-semibold md:text-4xl text-xl">{value}</p>
       </div>
     </div>
   )

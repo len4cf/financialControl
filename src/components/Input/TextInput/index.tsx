@@ -4,6 +4,7 @@ type TextInputProps = {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
   required?: boolean
   placeholder?: string
+  maxLength?: number
 }
 
 export default function TextInput({
@@ -12,6 +13,7 @@ export default function TextInput({
   onChange,
   required,
   placeholder,
+  maxLength,
 }: TextInputProps) {
   return (
     <div className="flex flex-col max-w-fit">
@@ -23,6 +25,7 @@ export default function TextInput({
         onChange={onChange}
         required={required}
         placeholder={placeholder}
+        maxLength={maxLength}
       />
     </div>
   )
