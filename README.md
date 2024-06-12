@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  <br>
+  
+  <br>
+  Sistema de Controle
+  <br>
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h4 align="center"><a href="http://electron.atom.io" target="_blank">Um sistema de controle financeiro</a>.</h4>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="#key-features">Features</a> •
+  <a href="#how-to-use">Como usar</a> •
+  <a href="#credits">Tecnologias</a> •
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![screenshot](../controleFinanceiro/src/assets/financialControl.png)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Design responsivo e intuitivo.
+- Escolher se o valor é uma saída ou uma entrada.
+- Visualizar as entradas e saídas inseridas anteriormente.
 
-- Configure the top-level `parserOptions` property like this:
+## Como usar
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Para clonar e rodar essa aplicação você precisará do [Git](https://git-scm.com) e [Node.js](https://nodejs.org/en/download/) (que vem com [npm](http://npmjs.com)) instalado em seu computador.
+
+```bash
+# Clone esse repositório
+$ git clone https://github.com/len4cf/financialControl.git
+
+# Entre no repositorio
+$ cd financialControl
+
+# Instale as dependências
+$ npm install
+
+# Rode
+$ npm start
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Tecnologias
+
+Esse projeto utiliza essas tecnologias:
+
+- React.js
+- Typescript
+- TailwindCSS
+
+## Entre em contato
+
+> GitHub [@len4cf](https://github.com/len4cf) &nbsp;&middot;&nbsp;
+> LinkedIn [Helena Carvalho](https://www.linkedin.com/in/helenacarvalhoferreira/)
