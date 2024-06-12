@@ -97,7 +97,7 @@ function App() {
     <div>
       <Title label="xxx" size="xl" cClassName="mb-4 text-center" />
       <Divider />
-      <div className="flex md:flex flex-col md:gap-0 gap-4 justify-between mt-4">
+      <div className="flex md:flex-row flex-col md:gap-0 gap-4 justify-between mt-4">
         <Card
           title="Entrada"
           value={mascaraValor(valorEntradaEnviado)}
