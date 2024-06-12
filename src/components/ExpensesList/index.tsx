@@ -15,9 +15,9 @@ export default function ExpensesList({
       {transacoes.map((transacao, index) => (
         <div
           key={index}
-          className="flex items-center justify-between bg-zinc-300 p-4 rounded text-zinc-700 mt-4"
+          className="flex items-center justify-between bg-zinc-300 p-4 rounded text-zinc-700 mt-4 w-full max-w-full "
         >
-          <span>{transacao.descricao}</span>
+          <span className="w-[100px]">{transacao.descricao}</span>
           <span>{mascaraValor(transacao.valor)}</span>
           <span
             className={`${
